@@ -97,8 +97,8 @@ export function TransactionsTable({ refreshTrigger = 0 }: TransactionsTableProps
   }
 
   return (
-    <div className="rounded-2xl border border-border bg-card p-6 shadow-xl">
-      <h3 className="mb-6 text-xl font-bold text-card-foreground">
+    <div className="rounded-2xl border border-border bg-card p-4 shadow-xl md:p-6">
+      <h3 className="mb-4 text-lg font-bold text-card-foreground md:mb-6 md:text-xl">
         Dernières Transactions
       </h3>
 
@@ -113,8 +113,8 @@ export function TransactionsTable({ refreshTrigger = 0 }: TransactionsTableProps
           Aucune transaction récente
         </div>
       ) : (
-        <div className="overflow-x-auto">
-          <Table>
+        <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+          <Table className="min-w-[400px]">
             <TableHeader>
               <TableRow className="border-border hover:bg-transparent">
                 <TableHead className="text-muted-foreground">Date</TableHead>

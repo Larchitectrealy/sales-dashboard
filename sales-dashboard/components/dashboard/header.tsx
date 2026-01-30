@@ -19,9 +19,9 @@ export function DashboardHeader() {
   }, [])
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold text-foreground">Tableau de Bord</h1>
-      <p className="text-sm text-muted-foreground">
+    <div className="min-w-0">
+      <h1 className="text-2xl font-bold text-foreground md:text-4xl truncate">Tableau de Bord</h1>
+      <p className="text-sm text-muted-foreground truncate">
         {isLoading
           ? "Chargement..."
           : userEmail

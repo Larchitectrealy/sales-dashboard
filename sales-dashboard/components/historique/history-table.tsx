@@ -66,8 +66,8 @@ export function HistoryTable({ transactions }: HistoryTableProps) {
   }
 
   return (
-    <div className="overflow-x-auto rounded-xl border border-zinc-800 bg-zinc-900/50">
-      <Table>
+    <div className="overflow-x-auto rounded-xl border border-zinc-800 bg-zinc-900/50 min-w-0">
+      <Table className="min-w-[500px]">
         <TableHeader>
           <TableRow className="border-zinc-800 hover:bg-transparent">
             <TableHead className="text-zinc-400">Date</TableHead>

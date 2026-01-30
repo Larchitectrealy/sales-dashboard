@@ -58,13 +58,13 @@ export function StatsCards({ refreshTrigger = 0 }: StatsCardsProps) {
   ]
 
   return (
-    <div className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3">
       {statsData.map((stat) => {
         const Icon = stat.icon
         return (
           <div
             key={stat.label}
-            className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/30"
+            className="rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary/30 md:p-5"
           >
             {isLoading ? (
               <div className="flex items-center justify-center py-4">
@@ -77,7 +77,7 @@ export function StatsCards({ refreshTrigger = 0 }: StatsCardsProps) {
                     <Icon className="h-5 w-5 text-primary" />
                   </div>
                 </div>
-                <p className="text-2xl font-bold text-card-foreground">{stat.value}</p>
+                <p className="text-xl font-bold text-card-foreground md:text-2xl">{stat.value}</p>
                 <p className="text-sm text-muted-foreground">{stat.label}</p>
               </>
             )}

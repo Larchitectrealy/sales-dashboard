@@ -106,13 +106,13 @@ export function PaymentGenerator({ onLinkCreated }: PaymentGeneratorProps) {
   }
 
   return (
-    <div className="rounded-2xl border border-border bg-card p-8 shadow-xl">
-      <div className="mb-6 flex items-center gap-3">
-        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/20">
-          <CreditCard className="h-6 w-6 text-primary" />
+    <div className="rounded-2xl border border-border bg-card p-4 shadow-xl md:p-8">
+      <div className="mb-4 flex items-center gap-3 md:mb-6">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/20 md:h-12 md:w-12">
+          <CreditCard className="h-5 w-5 text-primary md:h-6 md:w-6" />
         </div>
-        <div>
-          <h2 className="text-2xl font-bold text-card-foreground">
+        <div className="min-w-0">
+          <h2 className="text-xl font-bold text-card-foreground md:text-2xl">
             Générer un Paiement
           </h2>
           <p className="text-sm text-muted-foreground">
