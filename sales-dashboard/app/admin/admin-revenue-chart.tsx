@@ -63,8 +63,9 @@ export function AdminRevenueChart({ data }: AdminRevenueChartProps) {
                 border: '1px solid #27272a',
                 borderRadius: '8px',
               }}
+              itemStyle={{ color: '#e4e4e7' }}
               labelStyle={{ color: '#a1a1aa' }}
-              formatter={(value: number) => [`${value} €`, 'CA']}
+              formatter={(value: any) => [`${value} €`, 'CA']}
               labelFormatter={(label) => formatDateLabel(label)}
             />
             <Area
