@@ -2,6 +2,8 @@ import { redirect } from 'next/navigation'
 import { getCurrentProfile } from '@/app/actions/profile'
 import { DashboardClient } from '@/components/dashboard/dashboard-client'
 
+export const runtime = 'edge'
+
 export default async function DashboardPage() {
   const profile = await getCurrentProfile()
   if (!profile) redirect('/login')

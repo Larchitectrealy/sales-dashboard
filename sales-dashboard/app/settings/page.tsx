@@ -8,6 +8,7 @@ import { AddApiForm } from '@/components/settings/add-api-form'
 import { Wallet, ArrowLeft } from 'lucide-react'
 import { requireAdmin } from '@/app/actions/profile'
 
+export const runtime = 'edge'
 export const dynamic = 'force-dynamic'
 
 export default async function SettingsPage({ searchParams }: { searchParams?: Record<string, string | string[] | undefined> }) {

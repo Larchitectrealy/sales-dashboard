@@ -6,6 +6,7 @@ import { ArrowLeft, LayoutDashboard, Users } from 'lucide-react'
 import { AddSellerForm } from './add-seller-form'
 import { TeamPerformanceTable } from './team-performance-table'
 
+export const runtime = 'edge'
 export const dynamic = 'force-dynamic'
 
 export default async function AdminDashboardPage() {

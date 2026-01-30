@@ -73,12 +73,10 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
+     * Matcher restrictif : n'exécute le middleware que sur les routes de l'app.
+     * Exclut : api, _next/static, _next/image, favicon.ico, et tous les fichiers
+     * avec extension (images, fonts, CSS, JS statiques) pour éviter de bloquer le rendu.
      */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|css|js|woff2?|ttf|eot)$).*)',
   ],
 }

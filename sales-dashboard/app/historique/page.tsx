@@ -6,6 +6,8 @@ import { getHistoryTransactions } from '@/app/actions/get-transactions'
 import { getCurrentProfile } from '@/app/actions/profile'
 import { ArrowLeft, History } from 'lucide-react'
 
+export const runtime = 'edge'
+
 export default async function HistoriquePage() {
   const profile = await getCurrentProfile()
   if (!profile) redirect('/login')
