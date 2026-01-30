@@ -5,8 +5,6 @@ import { createAdminClient } from "@/lib/supabase-admin"
 import { revalidatePath } from "next/cache"
 import { getCurrentProfile } from "@/app/actions/profile"
 
-export const runtime = "edge"
-
 export type CreatePaymentLinkResult =
   | { paymentLink: string }
   | { error: string }
